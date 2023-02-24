@@ -1,27 +1,49 @@
-import React from 'react'
-import pokyPortada from '../../assets/images/portfolio/PokyPortada.png'
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 
-const Card  = () =>{
+
+
+
+function Carde({ imageSource, title, text, url }) {
 
 
     return (
-        <div className='container card-page'>
-            <div className='card'>
-                <img src={pokyPortada}  alt=""/>
-                <div className='card-body'>
-                    <h4 className='card-title'>Poky Drivers</h4>
-                    <p className='card-text text-secondary'> Poky Drivers is an adventure video game for mobile devices, which aims to teach road safety and aims to teach ROAD SAFETY and civic responsibility to children. 
-children. The objective is that children can relate to all aspects of road safety in a fun and efficient of road safety in a fun and effective way, in an effort focused on the formation and acquisition of safety and acquisition of safety concepts that will be useful for their pedestrian and vehicular pedestrian and vehicular traffic in the future.
-                    </p>
-                </div>
+        <>
+            <div className="container card-page">
+                <Card sx={{ maxWidth: 600 }}>
+                    <CardActionArea>
+                        <CardMedia
+                            component="img"
+                            height="340"
+                            image={`${imageSource}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                            alt="Poky Portada"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {text}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                            Share
+                        </Button>
+                    </CardActions>
+                </Card>
             </div>
-        </div>
-
+        </>
     )
 
 
 }
 
 
-export default Card
+export default Carde

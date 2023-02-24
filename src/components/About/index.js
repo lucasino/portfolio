@@ -1,8 +1,6 @@
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect,useState } from 'react'
-import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome'
-import {faAngular, faHtml5, faCss3, faReact} from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import aeIcon from '../../assets/images/aeIcon.png'
 import cIcon from '../../assets/images/cIcon.png'
@@ -55,10 +53,10 @@ const About = () => {
                         <img className='imagenIcon' src={cIcon} alt="logo"/> 
                     </div>
                     <div className='face3'>
-                        <img className='imagenIcon' src={houdiniIcon} alt="logo"/> 
+                        <img className='imagenIcon' src={pMIcon} alt="logo"/> 
                     </div>
                     <div className='face4'>
-                        <img className='imagenIcon' src={pMIcon} alt="logo"/> 
+                        <img className='imagenIcon' src={houdiniIcon} alt="logo"/> 
                     </div>
                     <div className='face5'>
                         <img className='imagenIcon' src={psIcon} alt="logo"/> 
