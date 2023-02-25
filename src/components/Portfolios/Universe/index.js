@@ -17,7 +17,7 @@ const About = () => {
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 3000)
+        }, 6000)
     }, [])
 
     return (
@@ -28,7 +28,7 @@ const About = () => {
                         <AnimatedLetters
                             letterClass={letterClass}
                             strArray={['U', 'n', 'i', 'v', 'e', 'r', 's', 'e', ' ', 'G', 'a', 'l', 'a', 'c', 't', 'i', 'c', ' ', 'R', 'a', 'c', 'i', 'n', 'g']}
-                            idx={47}
+                            idx={11}
                         />
                     </h1>
                     <p>
