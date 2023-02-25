@@ -5,8 +5,8 @@ import Home from './components/Home'
 import About from './components/About'
 import Games from './components/Games'
 import Contact from './components/Contact'
-
-
+import PokyDrivers from './components/Portfolios/PokyDrivers'
+import UGR from './components/Portfolios/Universe'
 function App() {
   return (
     <>
@@ -16,6 +16,8 @@ function App() {
       <Route path="about" element={<About />} />
       <Route path="games" element={<Games />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="pokydrivers" element={<PokyDrivers />} />
+      <Route path="ugr" element={<UGR />} />
       </Route>
     </Routes>
     </>

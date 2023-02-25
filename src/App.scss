@@ -26,6 +26,14 @@ $primary-color: #ffd700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Geomanist-Bold';
+  src: url('./assets/fonts/Geomanist-Bold.otf') format('otf'),
+  url('./assets/fonts/Geomanist-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;

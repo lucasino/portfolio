@@ -1,13 +1,13 @@
 import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect,useState } from 'react'
 import Loader from 'react-loaders'
-import aeIcon from '../../assets/images/aeIcon.png'
-import cIcon from '../../assets/images/cIcon.png'
-import houdiniIcon from '../../assets/images/houdiniIcon.png'
-import pMIcon from '../../assets/images/pMIcon.png'
-import psIcon from '../../assets/images/psIcon.png'
-import unityIcon from '../../assets/images/unityIcon.png'
+import aeIcon from '../../../assets/images/aeIcon.png'
+import cIcon from '../../../assets/images/cIcon.png'
+import houdiniIcon from '../../../assets/images/houdiniIcon.png'
+import pMIcon from '../../../assets/images/pMIcon.png'
+import psIcon from '../../../assets/images/psIcon.png'
+import unityIcon from '../../../assets/images/unityIcon.png'
 
 
 const About = () => {
@@ -27,8 +27,8 @@ const About = () => {
                 <h1>
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={['A','b','o','u','t',' ','m','e']}
-                        idx={15}
+                        strArray={['P','o','k','y',' ','D','r','i','v','e','r','s']}
+                        idx={21}
                     />
                 </h1>
                 <p>
