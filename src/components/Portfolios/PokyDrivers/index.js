@@ -2,12 +2,10 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import aeIcon from '../../../assets/images/aeIcon.png'
-import cIcon from '../../../assets/images/cIcon.png'
-import houdiniIcon from '../../../assets/images/houdiniIcon.png'
-import pMIcon from '../../../assets/images/pMIcon.png'
-import psIcon from '../../../assets/images/psIcon.png'
-import unityIcon from '../../../assets/images/unityIcon.png'
+
+import Logo from '../../../assets/images/portfolio/PD_Logo.png'
+import Portada from '../../../assets/images/portfolio/PokyPortada.png'
+import Video from '../../../assets/videos/trailer_Poky.mp4'
 
 
 const About = () => {
@@ -46,26 +44,21 @@ const About = () => {
 
                 </div>
                 <div className='stage-cube-cont'>
-                    <div className='cubespinner'>
-                        <div className='face1'>
-                            <img className='imagenIcon' src={aeIcon} alt="logo" />
-                        </div>
-                        <div className='face2'>
-                            <img className='imagenIcon' src={cIcon} alt="logo" />
-                        </div>
-                        <div className='face3'>
-                            <img className='imagenIcon' src={pMIcon} alt="logo" />
-                        </div>
-                        <div className='face4'>
-                            <img className='imagenIcon' src={houdiniIcon} alt="logo" />
-                        </div>
-                        <div className='face5'>
-                            <img className='imagenIcon' src={psIcon} alt="logo" />
-                        </div>
-                        <div className='face6'>
-                            <img className='imagenIcon' src={unityIcon} alt="logo" />
-                        </div>
-                    </div>
+                    <img className='solid-logo' src={Logo} alt="S" />
+
+
+                    <video className='video'
+                        autoPlay
+                        loop
+                        muted
+                        width="640" height="360"
+                        poster={Portada}
+                    >
+                        <source
+                            src={Video}
+                            type="video/mp4"
+                        />
+                    </video>
 
                 </div>
             </div>

@@ -2,12 +2,10 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import aeIcon from '../../../assets/images/aeIcon.png'
-import cIcon from '../../../assets/images/cIcon.png'
-import houdiniIcon from '../../../assets/images/houdiniIcon.png'
-import pMIcon from '../../../assets/images/pMIcon.png'
-import psIcon from '../../../assets/images/psIcon.png'
-import unityIcon from '../../../assets/images/unityIcon.png'
+
+import Logo from '../../../assets/images/portfolio/UGR_Logo.png'
+import Portada from '../../../assets/images/portfolio/UgrPortada.png'
+import Video from '../../../assets/videos/trailer_Ugr.mp4'
 
 
 const About = () => {
@@ -40,36 +38,31 @@ const About = () => {
                         In the races, 12 drivers will face off in teams of three to prove who is the best. The different characteristics of the cars and the multiple skills of the characters will give rise to unique strategies and combinations.
                     </p>
                     <p>
-                    {' '}
-                    Racing will be the most competitive mode of Universe Galactic Racing, which will include a rank system with rewards for the most demanding players. It will also feature more classic modes, such as Time Attack, with weekly rotations and monthly events that include unique rewards. Finally, it will also include a Time Bomb mode, which will be pure driving races, where the last one in each lap will be eliminated, leaving only the last one standing.
+                        {' '}
+                        Racing will be the most competitive mode of Universe Galactic Racing, which will include a rank system with rewards for the most demanding players. It will also feature more classic modes, such as Time Attack, with weekly rotations and monthly events that include unique rewards. Finally, it will also include a Time Bomb mode, which will be pure driving races, where the last one in each lap will be eliminated, leaving only the last one standing.
                     </p>
                     <p>
-                    {' '}
-                    In addition, the game will feature a "Paddock", which will include a Housing system, which can be decorated with trophies, cars, skins and a variety of cosmetic elements, the Paddock will be composed of the list of friends of the players, which can visit and be visited at any time.
+                        {' '}
+                        In addition, the game will feature a "Paddock", which will include a Housing system, which can be decorated with trophies, cars, skins and a variety of cosmetic elements, the Paddock will be composed of the list of friends of the players, which can visit and be visited at any time.
                     </p>
 
                 </div>
                 <div className='stage-cube-cont'>
-                    <div className='cubespinner'>
-                        <div className='face1'>
-                            <img className='imagenIcon' src={aeIcon} alt="logo" />
-                        </div>
-                        <div className='face2'>
-                            <img className='imagenIcon' src={cIcon} alt="logo" />
-                        </div>
-                        <div className='face3'>
-                            <img className='imagenIcon' src={pMIcon} alt="logo" />
-                        </div>
-                        <div className='face4'>
-                            <img className='imagenIcon' src={houdiniIcon} alt="logo" />
-                        </div>
-                        <div className='face5'>
-                            <img className='imagenIcon' src={psIcon} alt="logo" />
-                        </div>
-                        <div className='face6'>
-                            <img className='imagenIcon' src={unityIcon} alt="logo" />
-                        </div>
-                    </div>
+                    <img className='solid-logo' src={Logo} alt="S" />
+
+
+                    <video className='video'
+                        autoPlay
+                        loop
+                        muted
+                        width="640" height="360"
+                        poster={Portada}
+                    >
+                        <source
+                            src={Video}
+                            type="video/mp4"
+                        />
+                    </video>
 
                 </div>
             </div>
