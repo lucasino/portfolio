@@ -2,11 +2,34 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import Stack from '@mui/material/Stack';
 
 import Logo from '../../../assets/images/portfolio/PD_Logo.png'
 import Portada from '../../../assets/images/portfolio/PokyPortada.png'
 import Video from '../../../assets/videos/trailer_Poky.mp4'
 
+import Img1 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_01.PNG'
+import Img2 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_02.PNG'
+import Img3 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_03.PNG'
+import Img4 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_04.PNG'
+import Img5 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_05.PNG'
+import Img6 from '../../../assets/images/portfolio/screenshots_PD/PD_Screen_06.jpg'
+
+const Images = [{
+    img: Img1,
+}, {
+    img: Img2,
+}, {
+    img: Img3,
+}, {
+    img: Img4,
+}, {
+    img: Img5,
+}, {
+    img: Img6,
+}
+
+]
 
 const About = () => {
 
@@ -17,6 +40,10 @@ const About = () => {
             setLetterClass('text-animate-hover')
         }, 4500)
     }, [])
+
+
+
+
 
     return (
         <>
@@ -41,12 +68,16 @@ const About = () => {
                         Poky Drivers has been designed to be a cross-cutting tool, which is useful for both parents and teaching teams, to useful for both parents and teachers, to instill in children responsible habits and behaviors. responsible habits and behaviors. We want Poky Drivers to be a educational tool within the teaching program of educational centers. In this way children will be able to become aware of road safety, understand its rules, learn key road safety vocabulary and also learn about sustainability. sustainability. Through the digitization of road safety, children can learn by playing. learn by playing.
 
                     </p>
+                    <Stack className='gallery' direction="row" spacing={1}>
+                        {Images.map(({ img }) => (
+                            <img className='image-gallery' src={img} alt="img" />
+                        ))}
+                    </Stack>
+
 
                 </div>
                 <div className='stage-cube-cont'>
                     <img className='solid-logo' src={Logo} alt="S" />
-
-
                     <video className='video'
                         autoPlay
                         loop

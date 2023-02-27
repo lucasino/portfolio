@@ -1,3 +1,15 @@
+.about-page{
+    
+    .image-gallery{
+        position: relative;
+        max-width: 150px;
+        height: auto;
+        object-fit: scale-down;
+        border-radius: 3%;
+    }
+}
+
+
 .stage-cube-cont{
 
 
@@ -13,6 +25,7 @@
         position: absolute;
         top: 100%;
         left: 25%;
+        border-radius: 3%;
     }
 }
 

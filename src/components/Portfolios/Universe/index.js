@@ -2,10 +2,35 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import Stack from '@mui/material/Stack';
 
 import Logo from '../../../assets/images/portfolio/UGR_Logo.png'
 import Portada from '../../../assets/images/portfolio/UgrPortada.png'
 import Video from '../../../assets/videos/trailer_Ugr.mp4'
+
+import Img1 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_01.jpg'
+import Img2 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_02.jpg'
+import Img3 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_03.png'
+import Img4 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_04.png'
+import Img5 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_05.jpg'
+import Img6 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_06.jpg'
+
+
+const Images = [{
+    img: Img1,
+},{
+    img: Img2,  
+},{
+    img: Img3,  
+},{
+    img: Img4,  
+},{
+    img: Img5,  
+},{
+    img: Img6,  
+}
+
+]
 
 
 const About = () => {
@@ -45,7 +70,11 @@ const About = () => {
                         {' '}
                         In addition, the game will feature a "Paddock", which will include a Housing system, which can be decorated with trophies, cars, skins and a variety of cosmetic elements, the Paddock will be composed of the list of friends of the players, which can visit and be visited at any time.
                     </p>
-
+                    <Stack className='gallery' direction="row" spacing={1}>
+                        {Images.map(({ img }) => (
+                            <img className='image-gallery' src={img} alt="img" />
+                        ))}
+                    </Stack>
                 </div>
                 <div className='stage-cube-cont'>
                     <img className='solid-logo' src={Logo} alt="S" />
