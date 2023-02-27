@@ -40,9 +40,11 @@ const About = () => {
                         In the races, 12 drivers will face off in teams of three to prove who is the best. The different characteristics of the cars and the multiple skills of the characters will give rise to unique strategies and combinations.
                     </p>
                     <p>
+                    {' '}
                     Racing will be the most competitive mode of Universe Galactic Racing, which will include a rank system with rewards for the most demanding players. It will also feature more classic modes, such as Time Attack, with weekly rotations and monthly events that include unique rewards. Finally, it will also include a Time Bomb mode, which will be pure driving races, where the last one in each lap will be eliminated, leaving only the last one standing.
                     </p>
                     <p>
+                    {' '}
                     In addition, the game will feature a "Paddock", which will include a Housing system, which can be decorated with trophies, cars, skins and a variety of cosmetic elements, the Paddock will be composed of the list of friends of the players, which can visit and be visited at any time.
                     </p>
 
