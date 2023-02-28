@@ -1,31 +1,35 @@
-.about-page{
-    
-    .image-gallery{
-        position: relative;
-        max-width: 150px;
-        height: auto;
-        object-fit: scale-down;
-        border-radius: 3%;
+.about-page {
+
+    .gallery {
+        width: 70%;
+
+        .image-gallery {
+            position: relative;
+            max-width: 20%;
+            height: auto;
+            object-fit: scale-down;
+            border-radius: 3%;
+        }
+    }
+
+
+    .stage-cube-cont {
+        width: 50%;
+        position: absolute;
+
+        .solid-logo {
+            max-width: 350px;
+            height: auto;
+            position: absolute;
+            top: 0px;
+            left: 40%;
+        }
+
+        .video {
+            position: absolute;
+            top: 110%;
+            left: 20%;
+            border-radius: 2%;
+        }
     }
 }
-
-.stage-cube-cont{
-
-
-    .solid-logo{
-        max-width: 350px;
-        height: auto;
-        position: absolute;
-        top: 0px;
-        left: 45%;
-    }
-
-    .video{
-        position: absolute;
-        top: 30%;
-        left: 30%;
-        border-radius: 3%;
-    }
-
-}
-

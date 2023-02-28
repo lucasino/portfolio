@@ -1,31 +1,36 @@
-.about-page{
-    
-    .image-gallery{
-        position: relative;
-        max-width: 150px;
-        height: auto;
-        object-fit: scale-down;
-        border-radius: 3%;
+.about-page {
+
+    .gallery {
+        width: 70%;
+
+        .image-gallery {
+            position: relative;
+            max-width: 20%;
+            height: auto;
+            object-fit: scale-down;
+            border-radius: 3%;
+        }
     }
-}
 
 
-.stage-cube-cont{
-
-
-    .solid-logo{
-        max-width: 350px;
-        height: auto;
+    .stage-cube-cont {
+        width: 50%;
         position: absolute;
-        top: 0px;
-        left: 38%;
+
+        .solid-logo {
+            max-width: 300px;
+            height: auto;
+            position: absolute;
+            top: 0%;
+            left: 40%;
+        }
+
+        .video {
+            position: absolute;
+            top: 110%;
+            left: 20%;
+            border-radius: 2%;
+        }
     }
 
-    .video{
-        position: absolute;
-        top: 100%;
-        left: 25%;
-        border-radius: 3%;
-    }
 }
-
