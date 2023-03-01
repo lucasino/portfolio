@@ -2,7 +2,10 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import Stack from '@mui/material/Stack';
+
+import Box from '@mui/material/Box';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 import Logo from '../../../assets/images/portfolio/PD_Logo.png'
 import Portada from '../../../assets/images/portfolio/PokyPortada.png'
@@ -47,7 +50,7 @@ const About = () => {
 
     return (
         <>
-            <div className='container about-page'>
+            <Box className='container about-page' sx={{ overflowY: 'scroll' }}>
                 <div className='text-zone'>
                     <h1>
                         <AnimatedLetters
@@ -68,14 +71,20 @@ const About = () => {
                         Poky Drivers has been designed to be a cross-cutting tool, which is useful for both parents and teaching teams, to useful for both parents and teachers, to instill in children responsible habits and behaviors. responsible habits and behaviors. We want Poky Drivers to be a educational tool within the teaching program of educational centers. In this way children will be able to become aware of road safety, understand its rules, learn key road safety vocabulary and also learn about sustainability. sustainability. Through the digitization of road safety, children can learn by playing. learn by playing.
 
                     </p>
-                    <Stack className='gallery' direction="row" spacing={2}>
+                    <ImageList className='gallery' variant="masonry" cols={3} gap={2}>
                         {Images.map(({ img }) => (
-                            <img className='image-gallery' src={img} alt="img" />
+                            <ImageListItem className='image-gallery' key={img}>
+                                <img
+                                    src={`${img}?w=248&fit=crop&auto=format`}
+                                    srcSet={`${img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={img}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
                         ))}
-                    </Stack>
-
-
+                    </ImageList>
                 </div>
+                
                 <div className='stage-cube-cont'>
                     <img className='solid-logo' src={Logo} alt="S" />
                     <video className='video'
@@ -92,7 +101,7 @@ const About = () => {
                     </video>
 
                 </div>
-            </div>
+            </Box>
             <Loader type="pacman" />
         </>
     )

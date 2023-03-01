@@ -2,7 +2,9 @@ import './index.scss'
 import AnimatedLetters from '../../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 import Logo from '../../../assets/images/portfolio/UGR_Logo.png'
 import Portada from '../../../assets/images/portfolio/UgrPortada.png'
@@ -18,16 +20,16 @@ import Img6 from '../../../assets/images/portfolio/screenshots_UGR/UGR_Screen_06
 
 const Images = [{
     img: Img1,
-},{
-    img: Img2,  
-},{
-    img: Img3,  
-},{
-    img: Img4,  
-},{
-    img: Img5,  
-},{
-    img: Img6,  
+}, {
+    img: Img2,
+}, {
+    img: Img3,
+}, {
+    img: Img4,
+}, {
+    img: Img5,
+}, {
+    img: Img6,
 }
 
 ]
@@ -45,7 +47,7 @@ const About = () => {
 
     return (
         <>
-            <div className='container about-page'>
+            <Box className='container about-page' sx={{ overflowY: 'scroll' }}>
                 <div className='text-zone'>
                     <h1>
                         <AnimatedLetters
@@ -70,16 +72,22 @@ const About = () => {
                         {' '}
                         In addition, the game will feature a "Paddock", which will include a Housing system, which can be decorated with trophies, cars, skins and a variety of cosmetic elements, the Paddock will be composed of the list of friends of the players, which can visit and be visited at any time.
                     </p>
-                    <Stack className='gallery' direction="row" spacing={1}>
+                    <ImageList className='gallery' variant="masonry" cols={1} gap={2}>
                         {Images.map(({ img }) => (
-                            <img className='image-gallery' src={img} alt="img" />
+                            <ImageListItem className='image-gallery' key={img}>
+                                <img
+                                    src={`${img}?w=248&fit=crop&auto=format`}
+                                    srcSet={`${img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={img}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
                         ))}
-                    </Stack>
+                    </ImageList>
                 </div>
+
                 <div className='stage-cube-cont'>
                     <img className='solid-logo' src={Logo} alt="S" />
-
-
                     <video className='video'
                         autoPlay
                         loop
@@ -92,9 +100,8 @@ const About = () => {
                             type="video/mp4"
                         />
                     </video>
-
                 </div>
-            </div>
+            </Box>
             <Loader type="pacman" />
         </>
     )

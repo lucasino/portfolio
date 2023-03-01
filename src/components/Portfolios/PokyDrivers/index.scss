@@ -1,14 +1,13 @@
 .about-page {
 
     .gallery {
-        width: 70%;
+        width: 100%;
+        border-radius: 2%;
 
         .image-gallery {
             position: relative;
-            max-width: 20%;
-            height: auto;
-            object-fit: scale-down;
-            border-radius: 3%;
+            max-width: 100%;
+            border-radius: 80%;
         }
     }
 
@@ -22,13 +21,13 @@
             height: auto;
             position: absolute;
             top: 0px;
-            left: 40%;
+            left: 41%;
         }
 
         .video {
             position: absolute;
-            top: 110%;
-            left: 20%;
+            top: 90%;
+            left: 27%;
             border-radius: 2%;
         }
     }
