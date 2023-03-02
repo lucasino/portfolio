@@ -7,19 +7,24 @@ import Games from './components/Games'
 import Contact from './components/Contact'
 import PokyDrivers from './components/Portfolios/PokyDrivers'
 import UGR from './components/Portfolios/Universe'
+import { useEffect } from 'react';
+
 function App() {
+  useEffect(() =>{
+    document.title = "Lucas Calbo | Portfolio"
+  })
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="games" element={<Games />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="pokydrivers" element={<PokyDrivers />} />
-      <Route path="ugr" element={<UGR />} />
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="games" element={<Games />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="pokydrivers" element={<PokyDrivers />} />
+          <Route path="ugr" element={<UGR />} />
+        </Route>
+      </Routes>
     </>
   )
 }
